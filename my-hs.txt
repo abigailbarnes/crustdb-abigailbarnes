@@ -1,0 +1,15 @@
+-  A brief describe of your solution, in particular what design decisions you took and why. This is only needed for part of your solutions that had some significant work (e.g. just returning a counter or a pass through function has no design decision).
+
+The only major design decision I made was including a containers hash map in the struct for the StorageManager. I found that it made the most sense when considering we wanted to map a container_id to a specific container which is also synonymous with a heapfile!
+
+- How long you roughly spent on the milestone, and what would have liked/disliked on the milestone.
+
+I would have really appreciated partner coding for this project. It really is a bummer working on this alone because I'm personally really tweaked about cheating and what is and is not acceptable (in  terms of white boarding and pseudocode). 
+
+All in all, I spent around 40-50 hours on this with only a few mental breakdowns! For Univeristy reasons, that was a joke. 
+
+Really, though, I spent so long conceptually trying to understand what we were doing as well as searching for Rust functions to use. I think having these projects done in Python (or a really accessible language) or bringing back partner coding with peer evaluations would be super helpful. I find that having friends to talk through things with helps me drastically, but, especially with so many students having similar code last year and getting honor coded, I get worried that I am going to cross a line without realizing it, so I avoid debugging code or discussing code with anyone. 
+
+- If you know some part of the milestone is incomplete, write up what parts are not working, how close you think you are, and what part(s) you got stuck on.
+
+I am not necessarily stuck on any one thing since I think I have the logic down for the different aspects I was unable to finish. 

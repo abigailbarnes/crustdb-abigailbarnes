@@ -1,0 +1,23 @@
+ -  A brief describe of your solution, in particular what design decisions you took and why. This is only needed for part of your solutions that had some significant work (e.g. just returning a counter or a pass through function has no design decision).
+
+Regarding my structs, beyond what was given, I created a Metadata struct to hold the metadata that would later be used in the "header" and map to the records/data slots in the page. Additionally, I created GeneralMetadataHeader to represent the main header of the page that would store purely the page information. Later in the project, I added n_deletes and n_records for handling the from and to_bytes functions because of the looping requirements, since I store the "deleted records" SlotIds in a vector, also in this struct. This vector stores a simple vector of SlotIds of records that have been deleted, and are available to be overwritten. This vector also helps me re-map already existing Metadata blocks to a new or overwritten record. Finally, my Metadata struct just holds information regarding the size of the record and the offset value of the record that the given metadata represents in the record. Finally, my page consists of a header, the metadata mapped to the data, and the data itself (as well as the free space between the metadata objects and the data itself).
+
+For the add function, it began as very straight forward, but I went back to edit the function to update both n_records of the header as well as checking to see if there were any deleted SlotIds that were able to be used. In this case, I had to go back and write a function that would overwrite (I called my function overwrite... not very creative of me :( ) that would either overwrite existing records in "data" or, in the event that there was no available space in the data array, would add the record "normally" and assign it with the first SlotId of the free slot_ids from deletion vector.
+
+To be honest I'm running out of time to write this, but I commented my code super heavily for myself because I get lost super easily when I get in the zone and forget what certain pieces of my code do.
+This is also super hard to accomplish without any visuals, but I have straight up 17 pages of notes and drawings in my GoodNotes files for this assignment that I am happy to whip out, need be !
+
+Back to the explanation. My get bytes and from bytes are pretty straight forward. Reading in a data file and understanding how everything will be allocated. Each index range represents where each piece of information will be stores in the inputted data array in from_bytes and I just had to remember the order of the information when I started thinking about and coding get_bytes.
+
+- How long you roughly spent on the milestone, and what would have liked/disliked on the milestone.
+
+Oh, dear Lord. Literally 7 hours Saturday, 10 hours Sunday, and 8 hours Monday. I am tired. Lol. Rewarding, but I need to remember my blue light glasses for MS2. 
+
+So, to answer the question, 25 hours. 
+
+- If you know some part of the milestone is incomplete, write up what parts are not working, how close you think you are, and what part(s) you got stuck on.
+
+I left the iterator incomplete. I know how I would go about solving it after white boarding it last night, but to be honest I am so burnt out at this moment that I am just going to use my resubmission on it. But in terms of solving it, I just need to iterate through all the data I have but the only problem I see occurring is having two deleted spots next to each other. 
+
+I think I could definitely get this done by the end of the day, but, alas, midterm season is tough! I have more coding to do for my other classes! Python is calling my name!
+
